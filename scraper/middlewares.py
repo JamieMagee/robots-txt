@@ -12,12 +12,12 @@ class PrefixRetryMiddleware(RetryMiddleware):
             return exception
 
         new_prefix = choice(tuple(COMMON_PREFIXES - prefixes_tried))
-        request = self.add_prefix(request, new_prefix)
+        request = self.update_request(request, new_prefix)
 
         return self._retry(request, exception, spider)
 
     @staticmethod
-    def add_prefix(request, prefix):
+    def update_request(request, prefix):
         domain = request.meta['domain']
         meta = request.meta.copy()
         meta['prefixes'].add(prefix)
