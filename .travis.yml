@@ -4,7 +4,7 @@ python:
 addons:
   apt:
     packages:
-      - p7zip
+      - p7zip-full
 before_script:
   - 7z x robots-txt.7z
 script:
