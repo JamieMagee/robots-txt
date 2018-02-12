@@ -34,7 +34,7 @@ notebook==5.2.1
 numpy==1.14.0
 pandas==0.20.3
 pandocfilters==1.4.2
-parsel==1.2.0
+parsel==1.4.0
 parso==0.1.1
 pexpect==4.3.0
 pickleshare==0.7.4
